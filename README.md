@@ -1,2 +1,5 @@
 # ITI - Angular
-This repo contain solution tasks
+This repo contains tasks solutions for the following topics:
+- HTML and CSS
+- Javascript
+- Typescript & Angular.
