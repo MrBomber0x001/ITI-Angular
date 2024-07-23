@@ -2,47 +2,79 @@
 <html>
 <head>
   <title>Registration Form</title>
+  <style>
+    table {
+      width: 500px
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
   <form>
-    <label for="firstName">First name:</label>
-    <input type="text" id="firstName" name="firstName"><br><br>
-
-    <label for="lastName">Last name:</label>
-    <input type="text" id="lastName" name="lastName"><br><br>
-
-    <label for="userName">User name:</label>
-    <input type="text" id="userName" name="userName"><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
-
-    <label for="track">Track:</label>
-    <select id="track" name="track">
-      <option value="BI">BI</option>
-    </select><br><br>
-
-    <label>Gender:</label>
-    <input type="radio" name="gender" value="male"> Male
-    <input type="radio" name="gender" value="female"> Female<br><br>
-
-    <label>Favorites:</label>
-    <input type="checkbox" name="favorites" value="football"> Football
-    <input type="checkbox" name="favorites" value="basketball"> Basketball
-    <input type="checkbox" name="favorites" value="games"> Games
-    <input type="checkbox" name="favorites" value="reading"> Reading
-    <input type="checkbox" name="favorites" value="travel"> Travel<br><br>
-
-    <label for="description">Description:</label><br>
-    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
-
-    <input type="file" id="myFile">
-    <label for="myFile">Choose File</label><br><br>
-
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-
-    
+    <table>
+      <tr>
+        <td><label for="firstName">First name:</label></td>
+        <td><input type="text" id="firstName" name="firstName"></td>
+      </tr>
+      <tr>
+        <td><label for="lastName">Last name:</label></td>
+        <td><input type="text" id="lastName" name="lastName"></td>
+      </tr>
+      <tr>
+        <td><label for="userName">User name:</label></td>
+        <td><input type="text" id="userName" name="userName"></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password"></td>
+      </tr>
+      <tr>
+        <td><label for="track">Track:</label></td>
+        <td>
+          <select id="track" name="track">
+            <option value="BI">BI</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Gender:</label></td>
+        <td>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+        </td>
+      </tr>
+      <tr>
+        <td><label>Favorites:</label></td>
+        <td>
+          <input type="checkbox" name="favorites" value="football"> Football
+          <input type="checkbox" name="favorites" value="basketball"> Basketball
+          <input type="checkbox" name="favorites" value="games"> Games
+          <input type="checkbox" name="favorites" value="reading"> Reading
+          <input type="checkbox" name="favorites" value="travel"> Travel
+        </td>
+      </tr>
+      <tr>
+        <td><label for="description">Description:</label></td>
+        <td>
+          <textarea id="description" name="description" rows="4" cols="50"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="myFile">Choose File:</label></td>
+        <td>
+          <input type="file" id="myFile">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
   </form>
 </body>
 </html>
