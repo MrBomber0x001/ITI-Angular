@@ -1,0 +1,64 @@
+html, body, .container {
+  margin: 0 auto;
+  padding: 20px;
+  height: 100%
+}
+
+.top-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust column count as needed */
+  gap: 20px;
+}
+
+.image-item {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+{{/* footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  margin-top: 200px;
+} */}}
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+
+footer p {
+  margin: 0;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer nav li {
+  margin: 0 10px;
+}

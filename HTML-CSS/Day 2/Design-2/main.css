@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation bar styles */
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    height: 500px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero button {
+  background: linear-gradient(to bottom, #color-light-brown, #color-dark-brown);
+  border: none;
+  border-radius: 5px; /* Adjust as needed for desired roundness */
+  color: #DCB4A8; /* Or another appropriate light color */
+  font-weight: bold;
+  padding: 10px 20px; /* Adjust as needed for desired size */
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+/* Portfolio section styles */
+/* Add your own styles for portfolio thumbnails */
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .hero {
+        height: 300px;
+    }
+}
+
+        .services-section {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .services-title {
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .services-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .service-box {
+            width: 200px;
+            height: 200px;
+            background-color: #D3B8AE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Style the portfolio section */
+.portfolio-section {
+  text-align: center;
+  padding: 50px;
+}
+
+/* Style the heading */
+.portfolio-section h1 {
+  font-size: 24px; /* Adjust as needed */
+}
+
+/* Style the subtitle */
+.portfolio-section p {
+  font-size: 16px; /* Adjust as needed */
+}
+
+/* Create a grid for the images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust column count as needed */
+  gap: 10px; /* Adjust spacing between images */
+}
+
+/* Style individual images */
+.image-grid img {
+  width: 100%; /* Make images fill the grid cells */
+  height: auto;
+  object-fit: cover; /* Maintain aspect ratio */
+}
