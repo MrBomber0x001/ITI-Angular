@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+header {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  right: 200px;
+  background: #fff;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  height: 64px;
+}
+
+header .logo {
+  font-size: 2rem;
+  color: #dbcabe;
+  font-weight: bolder;
+}
+header .navbar a {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 20px 20px;
+  color: #706964;
+  margin-right: 5px;
+}
+header .navbar a:hover {
+  border-top: 5px solid #dbcabe;
+  color: #dbcabe;
+}
+header .navbar a:current {
+  border-top: 5px solid #dbcabe;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../images/S1.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  right: 200px;
+}
+
+.home .content h3,
+.home .content .para,
+.home .content #a {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home .content h3 {
+  margin: 0 20%;
+  font-size: 3rem;
+  color: #ffffff;
+  padding: 10px;
+  border-bottom: 5px #ffffff solid;
+}
+.home .content .para {
+  font-size: 2rem;
+  color: #ffffff;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+.btn {
+  display: block;
+  width: fit-content;
+  margin-left: 35%;
+  margin-top: 1rem;
+  background: #dbcabe;
+  color: #fff;
+  padding: 0.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.body {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.services .c {
+  padding-top: 20px;
+  margin-left: 50%;
+}
+.services .c .circle {
+  display: inline-block;
+  background-color: #dbcabe;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-left: 3.5px;
+}
+
+.services .heading {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+.services p {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.services .sq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  margin: 5px auto;
+}
+
+.services .sq .square {
+  background-color: #dbcabe;
+  height: 200px;
+  width: 200px;
+  margin: 0 20px;
+}
+
+.portfolio .heading {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+.portfolio p {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #333;
+  text-transform: uppercase;
+}
+.portfolio .container {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.portfolio .container img {
+  height: 200px;
+  width: 200px;
+  margin: 20px 20px;
+}
