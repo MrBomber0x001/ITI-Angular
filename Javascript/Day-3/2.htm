@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 </title>
+</head>
+
+<body>
+
+
+    <script>
+        let sum = 0;
+        let count = 0;
+
+        while (true) {
+            let input = prompt(`Enter a number (or 0 to finish). Current sum: ${sum}`);
+
+            if (isNaN(input) || input === "") {
+                alert("Please enter a valid number.");
+                continue;
+            }
+
+            let number = parseFloat(input);
+
+            if (number === 0 || sum + number > 100) {
+                break;
+            }
+
+            sum += number;
+            count++;
+        }
+
+        alert(`Total sum: ${sum}\nNumber of values entered: ${count}`);
+    </script>
+</body>
+
+</html>

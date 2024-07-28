@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        const userMessage = prompt("Please enter a message:");
+
+        const outputDiv = document.getElementById('output');
+
+        for (let i = 1; i <= 6; i++) {
+            const heading = document.createElement(`h${i}`);
+            
+            heading.textContent = userMessage;
+            
+            outputDiv.appendChild(heading);
+        }
+    </script>
+</body>
+</html>
