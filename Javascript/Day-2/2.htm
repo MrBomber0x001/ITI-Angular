@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operations</title>
+</head>
+
+<body>
+    <h1>Mathematical Operations on Array Elements</h1>
+    <form id="inputForm">
+        <label for="value1">Value 1:</label>
+        <input type="number" id="value1" required>
+        <br><br>
+        <label for="value2">Value 2:</label>
+        <input type="number" id="value2" required>
+        <br><br>
+        <label for="value3">Value 3:</label>
+        <input type="number" id="value3" required>
+        <br><br>
+        <button type="button" onclick="performOperations()">Calculate</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        function performOperations() {
+            const value1 = parseFloat(document.getElementById('value1').value);
+            const value2 = parseFloat(document.getElementById('value2').value);
+            const value3 = parseFloat(document.getElementById('value3').value);
+
+            if (isNaN(value1) || isNaN(value2) || isNaN(value3)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            const values = [value1, value2, value3];
+
+            const sum = values.reduce((acc, val) => acc + val, 0);
+            const multiplication = values.reduce((acc, val) => acc * val, 1);
+            const division = values.reduce((acc, val) => acc / val);
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+        <p>Sum of the 3 values: ${sum}</p>
+        <p>Multiplication of the 3 values: ${multiplication}</p>
+        <p>Division of the 3 values: ${division}</p>
+    `;
+        }
+    </script>
+</body>
+
+</html>

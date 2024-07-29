@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaindrome</title>
+</head>
+<body>
+    <p>Plaindrome or not</p>
+    <script>
+
+        function isPalindrome(str, caseSensitive){
+            const normalizedStr = caseSensitive ? str: str.toLowerCase();
+            const reversedStr =   normalizedStr.split("").reverse().join('');
+            return normalizedStr === reversedStr;
+        }
+        const inputString = prompt("Please enter a string to check for plaindrome: ");
+
+        if(inputString === null){
+            alert("you canceled the input, please try again.");
+        } else {
+            const considerCase = confirm("Do you want to consider case sensitivity?");
+            console.log(considerCase);
+            const result = isPalindrome(inputString, considerCase);
+
+
+            if(result){
+                alert(`"${inputString}" is a plaindrome`)
+            } else {
+                alert(`"${inputString}" not a plaindrome`)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findSecondLowestAndGreatest(arr) {
+            arr.sort((a, b) => a - b);
+
+            const secondLowest = arr[1];
+            const secondGreatest = arr[arr.length - 2];
+
+            return `${secondLowest},${secondGreatest}`;
+        }
+
+        const input = [1, 2, 3, 4, 5];
+        const output = findSecondLowestAndGreatest(input);
+        console.log(output);
+
+
+        console.log("==============================")
+        function capitalizeFirstLetterOfEachWord(str) {
+            const words = str.split(' ');
+
+            const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+
+            return capitalizedWords.join(' ');
+        }
+
+        const inputString = 'the quick brown fox';
+        const outputString = capitalizeFirstLetterOfEachWord(inputString);
+        console.log(outputString);
+    </script>
+</body>
+
+</html>
