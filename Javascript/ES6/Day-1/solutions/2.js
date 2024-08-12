@@ -1,4 +1,4 @@
-Copy// 1. Swap values of two variables using destructuring
+// 1. Swap values of two variables using destructuring
 let a = 5, b = 10;
 [a, b] = [b, a];
 console.log(`a: ${a}, b: ${b}`);
