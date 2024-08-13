@@ -1,0 +1,153 @@
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #34495e;
+  --text-color: #333;
+  --bg-color: #ecf0f1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  float: left;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero-content {
+  float: left;
+  width: 50%;
+}
+
+.hero-image {
+  float: right;
+  width: 50%;
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.features {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.feature {
+  float: left;
+  width: 23%;
+  margin: 0 1%;
+  text-align: center;
+}
+
+.feature img {
+  max-width: 100%;
+}
+
+.content {
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.who-we-are,
+.what-we-do,
+.testimonials {
+  float: left;
+  width: 31.33%;
+  margin: 0 1%;
+}
+
+.testimonial {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.testimonial img {
+  float: left;
+  margin-right: 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.footer-content {
+  overflow: hidden;
+}
+
+.links,
+.more-links {
+  float: left;
+  width: 48%;
+  margin: 0 1%;
+}
+
+.copyright {
+  clear: both;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.theme-changer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
