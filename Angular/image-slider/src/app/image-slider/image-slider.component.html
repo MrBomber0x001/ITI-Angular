@@ -1,0 +1,11 @@
+<div class="slider-container">
+  <div class="image-container">
+    <img [src]="images[currentIndex]" class="slider-image" alt="Slider Image" />
+  </div>
+  <div class="controls-container">
+    <button class="btn btn-primary" (click)="prevImage()">Prev</button>
+    <button class="btn btn-success" (click)="playSlides()">Play</button>
+    <button class="btn btn-danger" (click)="stopSlides()">Stop</button>
+    <button class="btn btn-primary" (click)="nextImage()">Next</button>
+  </div>
+</div>
