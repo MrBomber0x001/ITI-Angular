@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <h2 class="text-center my-4">Shopping Section</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let product of products">
+      <div class="card h-100">
+        <img
+          [src]="product.images[0]"
+          class="card-img-top"
+          alt="{{ product.title }}"
+        />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <h5 class="card-title mt-auto">Price: ${{ product.price }}</h5>
+          <p
+            class="card-text"
+            [ngClass]="{
+              'text-danger': product.stock === 0,
+              'text-warning': product.stock === 1,
+              'text-success': product.stock > 1
+            }"
+          >
+            {{
+              product.stock === 0
+                ? "Out of Stock"
+                : product.stock === 1
+                ? "Last Item"
+                : "In Stock: " + product.stock
+            }}
+          </p>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control"
+              [max]="product.stock"
+              min="0"
+              #quantityInput
+            />
+            <button
+              class="btn btn-primary"
+              (click)="shopping(product, quantityInput.value)"
+              [disabled]="product.stock === 0"
+            >
+              Buy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <h3 class="text-center">Total Price: ${{ totalPrice }}</h3>
+</div>
