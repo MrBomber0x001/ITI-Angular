@@ -1,0 +1,10 @@
+<select [(ngModel)]="SelectedCatID" class="form-select" >
+    @for(cat of categoryList ; track cat){
+        <option [value]="cat.id">{{cat.name}}</option>
+    }
+</select>
+<hr>
+<!-- ? Emit Event  -->
+<app-products [SendedID]="SelectedCatID" (PrdsTotalPrice)="RecivedPrice($event)"></app-products>
+
+<h1>the total from parent : {{RecivedTotalPrice|calc:100}}</h1>

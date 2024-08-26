@@ -1,0 +1,72 @@
+<!-- ? Two Way Binding -->
+<!-- <select [(ngModel)]="SelectedCatID" class="form-select" (change)="FilterateByID()">
+    @for(cat of categoryList ; track cat){
+        <option [value]="cat.id">{{cat.name}}</option>
+    }
+</select> -->
+<!-- <h1>{{SelectedCatID}}</h1> -->
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Count</th>
+            <th scope="col">Buy</th>
+            <th scope="col">MORE Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(p of filteredList ; track p){
+        <tr>
+            <td>{{p.id}}</td>
+            <td>{{p.name|uppercase}}</td>
+            <td><img src="{{p.imgUrl}}" height="100" alt="" appLightBox></td>
+            <!-- <td>{{p.price|currency}}</td> -->
+            <td>{{p.price|calc:100}}</td>
+            <!-- <td>{{p.price|calc}}</td> -->
+            <!-- <td>{{p.quantity}}</td> -->
+            <!-- <td [ngStyle]="{'background':p.quantity === 0 ?'red':'white'}">{{p.quantity}}</td> -->
+            <!-- <td [ngClass]="{'bg-danger':p.quantity === 0 ,'bg-warning':p.quantity===1}">{{p.quantity}}</td> -->
+            <!-- @if(p.quantity===0){
+            <td class="bg-danger text-light text-center align-middle">OutOfStock</td>
+            }@else if(p.quantity === 1) {
+            <td class="bg-warning text-light text-center align-middle">LastItem</td>
+            }@else {
+            <td>{{p.quantity}}</td>
+            } -->
+
+            @switch (p.quantity) {
+            @case (0) {
+            <td class="bg-danger text-light text-center align-middle">OutOfStock</td>
+            }
+
+            @case (1) {
+            <td class="bg-warning text-light text-center align-middle">LastItem</td>
+            }
+            @default {
+            <td class="text-center align-middle">{{p.quantity}}</td>
+
+            }
+
+            }
+            <!-- ? input reference -->
+            <td><input type="number" name="" id="" #iteminp [max]="p.quantity" ></td> 
+            <td><button class="btn btn-dark" (click)="Shopping(p.price,iteminp.value)" [disabled]="p.quantity === 0">buy</button></td>
+            <!-- <td><a class="btn btn-success" [routerLink]="['/products',p.id]" routerLinkActive="router-link-active" >See More</a></td> -->
+             <td><button class="btn btn-danger" (click)="OpenPrdDetails(p.id)">See More</button></td>
+             <td><button class="btn btn-dark" (click)="DeletePrdBYID(p.id)">Delete</button></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<hr>
+<!-- <h1>the total price : {{TotalPrice | calc:100}}</h1> -->
+<!-- ? directives ==> attribute , structural , component  -->
+<!-- * structural ==> if , for , switch -->
+<!-- * component ==> @Component / @Directive /@Pipe-->
+<!-- * attribute ==> ngStyle , ngClass -->

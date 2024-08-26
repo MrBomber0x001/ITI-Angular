@@ -1,0 +1,16 @@
+{{newPrd | json}}
+<form action="" (ngSubmit)="addProduct()" #prdForm="ngForm">
+    name : <input type="text" name="name" id="" class="form-control" [(ngModel)]="newPrd.name" required
+        pattern="[A-Za-z]{4}" #inpName="ngModel">
+    <div [hidden]="inpName.valid||inpName.untouched" class="alert alert-danger">
+        <small [hidden]="!inpName.errors?.['required']">
+            Name is Required
+        </small>
+        <small [hidden]="!inpName.errors?.['pattern']">
+            Name is 4 letters only
+        </small>
+    </div>
+    <hr>
+    price : <input type="text" name="price" id="" class="form-control" [(ngModel)]="newPrd.price">
+    <button class="btn btn-dark" [disabled]="prdForm.invalid">Submit</button>
+</form>
