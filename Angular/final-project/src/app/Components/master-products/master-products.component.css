@@ -1,0 +1,81 @@
+/* General styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Select styles */
+.form-select {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Price filter styles */
+.price-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.price-filter .form-select {
+    width: 48%;
+    /* Adjust as needed */
+}
+
+/* Card styles */
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Text styles */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: #007bff;
+}
+
+/* Badge styles */
+.badge {
+    font-size: 1em;
+    padding: 5px 8px;
+}
+
+.bg-success {
+    background-color: #28a745;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card-body {
+        padding: 10px;
+    }
+
+    .form-select,
+    .price-filter .form-select {
+        width: 100%;
+    }
+
+    .price-filter {
+        flex-direction: column;
+    }
+
+    .price-filter .form-select:first-child {
+        margin-bottom: 10px;
+    }
+}

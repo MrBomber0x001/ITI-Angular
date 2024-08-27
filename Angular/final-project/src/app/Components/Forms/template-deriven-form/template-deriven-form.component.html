@@ -1,16 +1,42 @@
 {{newPrd | json}}
 <form action="" (ngSubmit)="addProduct()" #prdForm="ngForm">
-    name : <input type="text" name="name" id="" class="form-control" [(ngModel)]="newPrd.name" required
-        pattern="[A-Za-z]{4}" #inpName="ngModel">
-    <div [hidden]="inpName.valid||inpName.untouched" class="alert alert-danger">
-        <small [hidden]="!inpName.errors?.['required']">
-            Name is Required
-        </small>
-        <small [hidden]="!inpName.errors?.['pattern']">
-            Name is 4 letters only
-        </small>
+    name : <input type="text" name="name" id="" class="form-control" [(ngModel)]="newPrd.name" #inpName="ngModel">
+    <div [hidden]="inpName.valid || inpName.untouched" class="alert alert-danger">
+        <small [hidden]="!inpName.errors?.['required']">Name is Required</small>
+        <small [hidden]="!inpName.errors?.['pattern']">Name is 4 letters only</small>
     </div>
     <hr>
-    price : <input type="text" name="price" id="" class="form-control" [(ngModel)]="newPrd.price">
+
+    price : <input type="number" name="price" id="" class="form-control" [(ngModel)]="newPrd.price" required
+        #inpPrice="ngModel">
+    <div [hidden]="inpPrice.valid || inpPrice.untouched" class="alert alert-danger">
+        <small [hidden]="!inpPrice.errors?.['required']">Price is Required</small>
+        <small [hidden]="!inpPrice.errors?.['min']">Price must be a positive number</small>
+    </div>
+    <hr>
+
+    category id : <input type="number" name="categoryId" id="" class="form-control" [(ngModel)]="newPrd.categoryId"
+        required #inpCategoryId="ngModel">
+    <div [hidden]="inpCategoryId.valid || inpCategoryId.untouched" class="alert alert-danger">
+        <small [hidden]="!inpCategoryId.errors?.['required']">Category ID is Required</small>
+        <small [hidden]="!inpCategoryId.errors?.['min']">Category ID must be a positive integer</small>
+    </div>
+    <hr>
+
+    image url : <input type="url" name="imgUrl" id="" class="form-control" [(ngModel)]="newPrd.imgUrl" required
+        #inpImgUrl="ngModel">
+    <div [hidden]="inpImgUrl.valid || inpImgUrl.untouched" class="alert alert-danger">
+        <small [hidden]="!inpImgUrl.errors?.['required']">Image URL is Required</small>
+    </div>
+    <hr>
+
+    quantity : <input type="number" name="qty" id="" class="form-control" [(ngModel)]="newPrd.quantity" min="1" required
+        #inpQty="ngModel">
+    <div [hidden]="inpQty.valid || inpQty.untouched" class="alert alert-danger">
+        <small [hidden]="!inpQty.errors?.['required']">Quantity is Required</small>
+        <small [hidden]="!inpQty.errors?.['min']">Quantity must be at least 1</small>
+    </div>
+    <hr>
+
     <button class="btn btn-dark" [disabled]="prdForm.invalid">Submit</button>
 </form>

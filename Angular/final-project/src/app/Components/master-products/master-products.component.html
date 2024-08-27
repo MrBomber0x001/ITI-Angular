@@ -1,10 +1,24 @@
-<select [(ngModel)]="SelectedCatID" class="form-select" >
+<div class="container mt-4 mb-4">
+    <div class="card bg-light">
+        <div class="card-body">
+            <h1 class="text-center text-primary">
+                Total from Parent: <span class="badge bg-success">{{RecivedTotalPrice|calc:100}}</span>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<select [(ngModel)]="SelectedCatID" class="form-select" aria-placeholder="Select Category">
     @for(cat of categoryList ; track cat){
-        <option [value]="cat.id">{{cat.name}}</option>
+    <option [value]="cat.id">{{cat.name}}</option>
     }
 </select>
+<select [(ngModel)]="sortOrder" class="form-select mt-2">
+    <option value="">Sort by Price</option>
+    <option value="asc">Price: Low to High</option>
+    <option value="desc">Price: High to Low</option>
+</select>
+
 <hr>
 <!-- ? Emit Event  -->
 <app-products [SendedID]="SelectedCatID" (PrdsTotalPrice)="RecivedPrice($event)"></app-products>
-
-<h1>the total from parent : {{RecivedTotalPrice|calc:100}}</h1>

@@ -1,29 +1,31 @@
 import { Component } from '@angular/core';
-import { StoreData } from '../../Models/store-data';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
-  storeData: StoreData;
-  isAppear:boolean;
-  btnText:string;
-  constructor() {
-    this.storeData = new StoreData("iti", "https://cdn.pixabay.com/photo/2021/11/14/18/36/telework-6795505_640.jpg", ["monofia", "smart", "cairo"]);
-    this.isAppear = false;
-    this.btnText = "show image"
-  }
-  ToggleisAppear(){
-    this.isAppear = !this.isAppear;
-    if(this.isAppear === true){
-      this.btnText = "hide image"
-    }else{
-      this.btnText = "show image"
-    }
-  }
+  projectTitle: string = 'E-Commerce Platform';
+  projectDescription: string = 'Welcome to our cutting-edge E-Commerce platform. This project showcases a modern, user-friendly interface for online shopping, featuring product listings, user authentication, and seamless checkout processes.';
+  keyFeatures: string[] = [
+    'Responsive design for all devices',
+    'Dynamic product catalog',
+    'User-friendly shopping cart',
+    'Secure payment integration',
+    'Customer reviews and ratings'
+  ];
+  techStack: string[] = [
+    'Angular',
+    'TypeScript',
+    'Bootstrap',
+    'Node.js',
+    'Express.js',
+    'MongoDB'
+  ];
 
+  constructor() {}
 }

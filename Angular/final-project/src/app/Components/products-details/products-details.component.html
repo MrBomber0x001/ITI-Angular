@@ -1,3 +1,15 @@
-<p>products-details works!</p>
-<h1>{{ExteractedID}}</h1>
-<h2>{{Prd?.name}}</h2>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h1 class="mb-0">Product Details</h1>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">{{Prd?.name}}</h2>
+            <p class="card-text"><strong>Product ID:</strong> {{ExteractedID}}</p>
+            <p class="card-text"><strong>Price:</strong> ${{Prd?.price}}</p>
+            <p class="card-text"><strong>Quantity:</strong> {{Prd?.quantity}}</p>
+            <p class="card-text"><strong>Category ID:</strong> {{Prd?.categoryId}}</p>
+            <img [src]="Prd?.imgUrl" [alt]="Prd?.name" class="img-fluid mt-3 mb-3">
+        </div>
+    </div>
+</div>

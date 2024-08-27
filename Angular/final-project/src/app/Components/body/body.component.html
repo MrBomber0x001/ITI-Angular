@@ -1,14 +1,26 @@
-<!-- ? one way binding [data-binding] -->
-<div class="card cls">
-    @if(isAppear){
-        <img [src]="storeData.img" class="card-img-top" alt="..." height="300">
-    }
-    <!-- <img src="{{storeData.img}}" class="card-img-top" alt="..." height="300"> -->
-    <div class="card-body">
-      <h5 class="card-title">the data title is : {{storeData.title}}</h5>
-      @for(branch of storeData.branchs ; track branch){
-          <p class="card-text">{{branch}}</p>
-      }
-      <button class="btn btn-dark w-100" (click)="ToggleisAppear()">{{btnText}}</button>
+<div class="container mt-5">
+  <h1 class="mb-4">{{projectTitle}}</h1>
+  <p class="lead mb-4">{{projectDescription}}</p>
+
+  <div class="card mb-4">
+    <div class="card-header">
+      <h2>Key Features</h2>
     </div>
+    <ul class="list-group list-group-flush">
+      @for (feature of keyFeatures; track feature) {
+      <li class="list-group-item">{{feature}}</li>
+      }
+    </ul>
   </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Tech Stack</h2>
+    </div>
+    <ul class="list-group list-group-flush">
+      @for (tech of techStack; track tech) {
+      <li class="list-group-item">{{tech}}</li>
+      }
+    </ul>
+  </div>
+</div>

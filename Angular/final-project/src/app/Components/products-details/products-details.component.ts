@@ -19,7 +19,6 @@ export class ProductsDetailsComponent implements OnInit , OnDestroy{
   }
   ngOnDestroy(): void {
     
-    // alert("bye bye")
   }
 
   RecieveID(){
@@ -27,6 +26,8 @@ export class ProductsDetailsComponent implements OnInit , OnDestroy{
   }
   GetPrd(){
    this.Prd =  this.staticdata.getPrdByID(this.ExteractedID)
+   console.log(this.staticdata.prdList);
+   console.log(this.Prd);
   }
   ngOnInit(): void {
     this.RecieveID();

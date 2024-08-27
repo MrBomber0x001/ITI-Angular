@@ -14,11 +14,12 @@ export class ShoppingComponent implements OnInit {
   data: any[] = [];
   constructor(private dynamicdata: DynamicDataService) { }
 
-  GetAll() {
+  getAll() {
     this.dynamicdata.getAllData().subscribe(prds => this.data = prds)
   }
+
   ngOnInit(): void {
-    this.GetAll()
+    this.getAll()
     console.log(this.data);
   }
 }
